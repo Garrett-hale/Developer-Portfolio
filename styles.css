@@ -12,7 +12,7 @@
   padding: 0px;
   font-family: var(--font-one);
   font-size: var(--font-one-size);
-  //border: 1px solid red;
+  /*border: 1px solid red;*/
 }
 
 .header {
@@ -61,6 +61,7 @@
   background: gray;
   height: 50px;
   border-bottom: 3px solid var(--secondary);
+  /*background-image: linear-gradient(to right,var(--secondary), var(--primary));*/
   padding-top: 5px;
 }
 
@@ -85,6 +86,7 @@
   width: 100px;
   height: 10px;
   border-bottom: 4px solid black;
+  margin-bottom: 20px;
 }
 
 .info-container {
@@ -236,6 +238,7 @@
 
 .contact {
   background-color: gray;
+  /*background-image: linear-gradient(to bottom,var(--secondary), var(--primary));*/
   height: 550px;
   margin-top: 150px;
 }
@@ -257,7 +260,7 @@
   background-color: #1e242c;
   display: block;
   margin-top: 70px;
-  width: 90%;
+  width: 50%;
   padding-left: 10px;
   padding-bottom: 7px;
   padding-top: 7px;
@@ -270,7 +273,7 @@
   background-color: #1e242c;
   display: block;
   margin-top: 2px;
-  width: 90%;
+  width: 50%;
   padding-left: 10px;
   padding-bottom: 7px;
   padding-top: 7px;
@@ -283,7 +286,7 @@
   background-color: #1e242c;
   display: block;
   margin-top: 2px;
-  width: 90%;
+  width: 50%;
   padding-left: 10px;
   padding-bottom: 7px;
   padding-top: 7px;
@@ -304,18 +307,25 @@
 }
 
 .social-media {
+  /*width: 60px;*/
   width: 60px;
   background-color: gray;
   height: 60px;
-  margin: auto;
-  margin-top: 70px;
+  /*margin: auto;*/
+  margin-top: 25px;
   transition-duration: 0.4s;
+  display: inline-block;
 }
 
 .social-media img {
   width: 25px;
   display: block;
   padding-top: 15px;
+}
+
+.social-media-git-icon img {
+  width: 40px;
+  margin-top: -5px;
 }
 
 .social-media:hover {
@@ -327,6 +337,7 @@
 }
 
 .copyright {
+  color: white;
   text-align: center;
   font-size: 16px;
   margin-top: 40px;

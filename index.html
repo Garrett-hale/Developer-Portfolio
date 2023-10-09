@@ -12,7 +12,7 @@
     <div class="header">
       <div></div>
       <h1 class="h11">Hello, I am Garrett Hale</h1>
-      <h1 class="h12">I am a Front End Web Developer</h1>
+      <h1 class="h12">Front End Web Developer</h1>
       <button class="button" onclick="scrollToProjects()">View my work &#8594;</button>
     </div>
 
@@ -137,19 +137,31 @@
     <div class="contact">
       <h1>CONTACT</h1>
       <div class="contact-underline"></div>
-      <input class="input-name" type="text" placeholder="Name" maxlength="20">
-      <input class="input-email" type="email" placeholder="Email" maxlength="30">
-      <textarea class="textarea-message" placeholder="Your Message" cols="30" rows="7"></textarea>
+        <form action="https://formsubmit.co/Garrett.hale@email.com" method="POST">
+        <input class="input-name name" type="text" placeholder="Name" maxlength="20">
+        <input class="input-email email" type="email" placeholder="Email" maxlength="30">
+        <textarea class="textarea-message message" placeholder="Your Message" cols="30" rows="7"></textarea>
+        <!--<input type="hidden" name="_next" value="thankyou.html">-->
+        <input type="submit" class="button" onclick="sendEmail()">Send &#8594;</button>
+      </form>
     </div>
+
+
+
+    <!--<input type="text" name="name" required>
+     <input type="email" name="email" required>
+     <button type="submit">Send</button>
+   </form>-->
 
     <div class="footer">
       <div></div>
 
       <div class="social-media" onclick="linkedIn()"><img src="images/Linkedin Logo.png" alt="Picture of Linkedin Logo"></div>
+      <div class="social-media social-media-git-icon" onclick="gitHub()"><img src="images/Github Logo.png" alt="Picture of Github Logo"></div>
       <div class="copyright">GARRETT HALE ©2022</div>
     </div>
 
-
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
