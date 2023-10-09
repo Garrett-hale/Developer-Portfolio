@@ -343,6 +343,14 @@
   margin-top: 40px;
 }
 
+h1 #email-sent {
+  margin: auto;
+}
+
+#email-sent {
+  text-align: center;
+}
+
 //Tablet
 @media only screen and (max-width: 768px) {
 
