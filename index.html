@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
    <head>
-      <meta charset="utf-8">
+      <meta content="width=device-width, initial-scale=1" name="viewport" charset="utf-8" />
       <title>Garrett Hale's Portfolio</title>
       <link rel="stylesheet" href="styles.css">
    </head>
@@ -12,13 +12,19 @@
          <h1 class="h12">Front End Web Developer</h1>
          <button class="button" onclick="scrollToProjects()">View my work &#8594;</button>
       </div>
-      <div class="nav">
-         <div class="mobile-nav-icon"></div>
-         <div class="mobile-nav-icon"></div>
-         <div class="mobile-nav-icon"></div>
+      <div id="nav">
+         <div class="mobile-nav-icon" onmouseenter="navShow()"></div>
+         <div class="mobile-nav-icon" onmouseenter="navShow()"></div>
+         <div class="mobile-nav-icon" onmouseenter="navShow()"></div>
+      </div>
+      <div id="dropdown-content">
+        <button class="button" onclick="scrollToSkills(), navHide()">Skills</button>
+        <button class="button" onclick="scrollToProjects(), navHide()">Projects</button>
+        <button class="button" onclick="scrollToEducation(), navHide()">Education</button>
+        <button class="button" onclick="scrollToContacts(), navHide()">Contact</button>
       </div>
       <div class="about">
-      <h1>Skills</h1>
+      <h1 id="skills">Skills</h1>
       <div class="about-underline"></div>
       <div class="skills-container">
       <div class="skill">
@@ -53,7 +59,7 @@
          </div>
          <h1 id="projects">Projects</h1>
          <div class="about-underline"></div>
-         <h1>Education</h1>
+         <h1 id="education">Education</h1>
          <div class="about-underline"></div>
          <div class="info-container">
             <div class="info">
@@ -87,7 +93,7 @@
          </div>
       </div>
       <div class="contact">
-         <h1>CONTACT</h1>
+         <h1 id="contacts">CONTACT</h1>
          <div class="contact-underline"></div>
          <form action="https://formsubmit.co/Garrett.hale@yahoo.com" method="POST">
             <input type="hidden" name="_captcha" value="false">

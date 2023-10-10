@@ -15,6 +15,10 @@
   /*border: 1px solid red;*/
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .header {
   height: 1000px;
   background-color: var(--primary);
@@ -57,7 +61,7 @@
 }
 
 
-.nav {
+#nav {
   background: gray;
   height: 50px;
   border-bottom: 3px solid var(--secondary);
@@ -74,6 +78,26 @@
   height: 5px;
   background-color: white;
   margin: 5px 87%;
+}
+
+#dropdown-content {
+  margin: 0px 84%;
+  position: absolute;
+  visibility: hidden;
+}
+
+#dropdown-content .button {
+  color: white;
+  border: 0;
+  margin-top: 0px;
+  background-color: gray;
+  width: 150px;
+}
+
+#dropdown-content .button:hover {
+  background-image: linear-gradient(to bottom, var(--secondary), var(--primary));
+  /*background-color: linear-gradient(to bottom, var(--primary), var(--secondary));*/
+  /*border: 2px solid black;*/
 }
 
 .about h1 {
@@ -351,15 +375,21 @@ h1 #email-sent {
   text-align: center;
 }
 
-//Tablet
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 576px) {
+  .mobile-nav-icon {
+    margin: 5px 48%;
+  }
 
+  #dropdown-content {
+    margin: 0px 38%;
+  }
 }
 
-//Desktop
+
+/*//Desktop
 @media only screen and (max-width: 1200px) {
 
-}
+}*/
 
 
 /*h1 {
