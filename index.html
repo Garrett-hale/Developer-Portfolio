@@ -12,16 +12,18 @@
          <h1 class="h12">Front End Web Developer</h1>
          <button class="button" onclick="scrollToProjects()">View my work &#8594;</button>
       </div>
-      <div id="nav">
-         <div class="mobile-nav-icon" onmouseenter="navShow()"></div>
-         <div class="mobile-nav-icon" onmouseenter="navShow()"></div>
-         <div class="mobile-nav-icon" onmouseenter="navShow()"></div>
+      <div id="nav-bar">
+        <div id="nav" onmouseenter="mouseNav(true), navShow()" onmouseout="mouseNav(false), navHide()">
+         <div class="mobile-nav-icon" onmouseenter="mouseNav(true)"></div>
+         <div class="mobile-nav-icon" onmouseenter="mouseNav(true)"></div>
+         <div class="mobile-nav-icon" onmouseenter="mouseNav(true)"></div>
+        </div>
       </div>
       <div id="dropdown-content">
-        <button class="button" onclick="scrollToSkills(), navHide()">Skills</button>
-        <button class="button" onclick="scrollToProjects(), navHide()">Projects</button>
-        <button class="button" onclick="scrollToEducation(), navHide()">Education</button>
-        <button class="button" onclick="scrollToContacts(), navHide()">Contact</button>
+        <button class="button" onclick="scrollToSkills(), navClickHide()" onmouseenter="mouseDropDown(true)" onmouseout="navHide(), mouseDropDown(false)">Skills</button>
+        <button class="button" onclick="scrollToProjects(), navClickHide()" onmouseenter="mouseDropDown(true)" onmouseout="navHide(), mouseDropDown(false)">Projects</button>
+        <button class="button" onclick="scrollToEducation(), navClickHide()" onmouseenter="mouseDropDown(true)" onmouseout="navHide(), mouseDropDown(false)">Education</button>
+        <button class="button" onclick="scrollToContacts(), navClickHide()" onmouseenter="mouseDropDown(true)" onmouseout="navHide(), mouseDropDown(false)">Contact</button>
       </div>
       <div class="about">
       <h1 id="skills">Skills</h1>
