@@ -89,7 +89,7 @@ html {
 }
 
 #dropdown-content {
-  margin: 0px 84%;
+  margin-left: 86%;
   position: absolute;
   visibility: hidden;
 }
@@ -390,7 +390,7 @@ h1 #email-sent {
   }
 
   #dropdown-content {
-    margin: 0px 36%;
+    margin-left: 44%;
   }
 }
 
