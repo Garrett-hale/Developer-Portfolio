@@ -19,11 +19,14 @@ html {
   scroll-behavior: smooth;
 }
 
-.header {
+#header {
   height: 1000px;
   background-color: var(--primary);
   padding-top: 1px;
   background-image: linear-gradient(to bottom, var(--primary), var(--secondary));
+  text-align: center;
+  white-space: nowrap;
+  font-size: 25px;
 }
 
 .button {
@@ -47,7 +50,7 @@ html {
 .header {
   text-align: center;
   white-space: nowrap;
-  //font-size: 25px;
+  font-size: 25px;
 }
 
 
@@ -58,6 +61,12 @@ html {
 
 .h12 {
   font-size: 16px;
+}
+
+.h1-app {
+  margin-top: 25px;
+  font-size: 50px;
+  color: white;
 }
 
 
