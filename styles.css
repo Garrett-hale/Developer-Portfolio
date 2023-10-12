@@ -47,6 +47,25 @@ html {
   border: 2px solid black;
 }
 
+#calculator {
+  margin-top: 300px
+}
+
+.button-calculator {
+  border-radius: 10px;
+  display: inline-block;
+  margin: 2px 2px;
+  background-color: white;
+  width: 75px;
+  height: 75px;
+  line-height: 10px;
+}
+
+.button-calculator p {
+  margin-top: 31px;
+  text-align: center;
+}
+
 .header {
   text-align: center;
   white-space: nowrap;

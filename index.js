@@ -6,10 +6,6 @@ function websiteLink(link) {
   window.location.href = link;
 }
 
-function gitHub() {
-  window.location.href = 'https://github.com/Garrett-hale';
-}
-
 function scrollToView(scrollToId) {
   document.getElementById(scrollToId).scrollIntoView();
 }
@@ -17,7 +13,7 @@ function scrollToView(scrollToId) {
 function navShow(trueOrFalse) {
   if (trueOrFalse == true) {
     document.getElementById("dropdown-content").style.visibility = "visible";
-  } else if (trueOrFalse == false) {
+  } else {
     document.getElementById("dropdown-content").style.visibility = "hidden";
   }
 }
@@ -40,12 +36,30 @@ function mouseDropDown(trueOrFalse) {
 
 //Calculator app
 
-function createElementAndAppend(elementTag, elementText, parentId) {
-  // Create element:
-  const element = document.createElement(elementTag);
-  element.innerText = elementText;
+function calculatorButtonPress() {
+  console.log("Calculator Button Pressed!");
+}
 
-  // Append to body:
-  //document.#header.appendChild(element);
+function createElementAndAppend(elementTag, elementText, parentId) {
+  // Create element
+  const element = document.createElement(elementTag);
+  //Change text of element
+  element.innerHTML = "<p>" + elementText + "</p>";
+  //Add Attribute
+  addAttributeToElement(element, "class", "button-calculator");
+  addAttributeToElement(element, "onclick", "test()");
+  // Append to parent
   document.getElementById(parentId).appendChild(element);
+}
+
+function addAttributeToElement(elementTarget, attributeName, attributeValue) {
+  // Create a class attribute
+  const att = document.createAttribute(attributeName);
+
+  // Set the value of the class attribute
+  att.value = attributeValue;
+
+  // Add the class attribute
+  const element = elementTarget;
+  element.setAttributeNode(att);
 }
