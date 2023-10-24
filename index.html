@@ -1,155 +1,122 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <!--<link rel="stylesheet" href="main.css">-->
-    <!--<link rel="stylesheet" href="normalize.css">-->
-    <!--<link rel="stylesheet" href="styles.min.css">-->
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <div class="header">
-      <div></div>
-      <h1 class="h11">Hello, I am Garrett Hale</h1>
-      <h1 class="h12">I am a Front End Web Developer</h1>
-      <button class="button" onclick="scrollToProjects()">View my work &#8594;</button>
-    </div>
-
-    <div class="nav">
-      <div class="mobile-nav-icon"></div>
-      <div class="mobile-nav-icon"></div>
-      <div class="mobile-nav-icon"></div>
-
-    </div>
-
-    <div class="about">
-      <h1>Skills</h1>
-      <div class="about-underline"></div>
-
-      <div class="skills-container">
-        <div class="skill">
-
-          <div class="skill-bar-empty">
-            <div class="skill-bar skill-javascript">Javascript 8/10</div>
-          </div>
+   <head>
+      <meta content="width=device-width, initial-scale=1" name="viewport" charset="utf-8" />
+      <title>Garrett Hale's Portfolio</title>
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
+      <div id="header">
+         <h1 class="h11">Hello, I am Garrett Hale</h1>
+         <h1 class="h12">Front End Web Developer</h1>
+         <button class="button" onclick="scrollToView(`projects`)">View my work &#8594;</button>
+      </div>
+      <div id="nav-bar">
+        <div id="nav" onmouseenter="mouseNav(true), navShow(true)" onmouseout="mouseNav(false), navHideTimer()">
+         <div class="mobile-nav-icon" onmouseenter="mouseNav(true)"></div>
+         <div class="mobile-nav-icon" onmouseenter="mouseNav(true)"></div>
+         <div class="mobile-nav-icon" onmouseenter="mouseNav(true)"></div>
         </div>
-
-        <div class="skills-container">
-          <div class="skill">
-
+      </div>
+      <div id="dropdown-content">
+        <button class="button" onclick="scrollToView(`skills`), navShow(false)" onmouseenter="mouseDropDown(true)" onmouseout="navHideTimer(), mouseDropDown(false)">Skills</button>
+        <button class="button" onclick="scrollToView(`projects`), navShow(false)" onmouseenter="mouseDropDown(true)" onmouseout="navHideTimer(), mouseDropDown(false)">Projects</button>
+        <button class="button" onclick="scrollToView(`education`), navShow(false)" onmouseenter="mouseDropDown(true)" onmouseout="navHideTimer(), mouseDropDown(false)">Education</button>
+        <button class="button" onclick="scrollToView(`contacts`), navShow(false)" onmouseenter="mouseDropDown(true)" onmouseout="navHideTimer(), mouseDropDown(false)">Contact</button>
+      </div>
+      <div class="about">
+      <h1 id="skills">Skills</h1>
+      <div class="about-underline"></div>
+      <div class="skills-container">
+      <div class="skill">
+         <div class="skill-bar-empty">
+            <div class="skill-bar skill-javascript">Javascript 8/10</div>
+         </div>
+      </div>
+      <div class="skills-container">
+      <div class="skill">
+         <div class="skill-bar-empty">
+            <div class="skill-bar skill-react">React.js 5/10</div>
+         </div>
+      </div>
+      <div class="skills-container">
+      <div class="skill">
+         <div class="skill-bar-empty">
+            <div class="skill-bar skill-git">Git 8/10</div>
+         </div>
+      </div>
+      <div class="skills-container">
+         <div class="skill">
             <div class="skill-bar-empty">
-              <div class="skill-bar skill-react">React.js 5/10</div>
+               <div class="skill-bar skill-css">CSS 8/10</div>
             </div>
-          </div>
-
-          <div class="skills-container">
+         </div>
+         <div class="skills-container">
             <div class="skill">
-
-              <div class="skill-bar-empty">
-                <div class="skill-bar skill-git">Git 8/10</div>
-              </div>
+               <div class="skill-bar-empty">
+                  <div class="skill-bar skill-html">HTML 9/10</div>
+               </div>
             </div>
-
-            <div class="skills-container">
-              <div class="skill">
-
-                <div class="skill-bar-empty">
-                  <div class="skill-bar skill-css">CSS 8/10</div>
-                </div>
-              </div>
-
-              <div class="skills-container">
-                <div class="skill">
-
-                  <div class="skill-bar-empty">
-                    <div class="skill-bar skill-html">HTML 9/10</div>
-                  </div>
-                </div>
-
-
-      </div>
-
-
-
-      <div class="me">
-        <!--
-        <img src="images/me.png" alt="Picture of Me">
-
-        <h2>Who's this guy?</h2>
-        <p>I'm a Front End Developer.<br/> I have serious passion for UI effects, animations and creating intuitive, dynamic user experiences.</p>
-        -->
-      </div>
-
-      <h1 id="projects">Projects</h1>
-      <div class="about-underline"></div>
-
-      <h1>Education</h1>
-      <div class="about-underline"></div>
-
-      <div class="info-container">
-        <!--<div class="info">
-          <div class="hexagon">
-            <img src="images/speed-meter.png" alt="picture of speed meter">
-          </div>
-            <h2>Searching for a Developer Position</h2>
-            <p>2023</p>
-          </div>-->
-
-          <div class="info">
-            <div class="hexagon">
-              <img src="images/bulb.png" alt="picture of speed meter">
-            </div>
-              <h2>Building My Own Projects</h2>
-              <p>2023</p>
-            </div>
-
+         </div>
+         <h1 id="projects">Projects</h1>
+         <div class="about-underline"></div>
+         <h2>React.js</h2>
+         <div class="about-underline"></div>
+         <h2>Javascript</h2>
+         <div class="about-underline"></div>
+         <a href="js-apps/calculator.html">Calculator</a>
+         <h1 id="education">Education</h1>
+         <div class="about-underline"></div>
+         <div class="info-container">
             <div class="info">
-              <div class="hexagon">
-                <img src="images/tablet-and-phone.png" alt="picture of speed meter">
-              </div>
-                <h2>Learned from Team Tree House, Zero To Mastery Academy, and Udemy</h2>
-                <p>React.js, Git, Advanced Javascript</p>
-              </div>
-
-
-              <div class="info">
-                <div class="hexagon">
+               <div class="hexagon">
+                  <img src="images/bulb.png" alt="picture of speed meter">
+               </div>
+               <h2>Building My Own Projects</h2>
+               <p>2023</p>
+            </div>
+            <div class="info">
+               <div class="hexagon">
+                  <img src="images/tablet-and-phone.png" alt="picture of speed meter">
+               </div>
+               <h2>Learned from Team Tree House, Zero To Mastery Academy, and Udemy</h2>
+               <p>React.js, Git, Advanced Javascript</p>
+            </div>
+            <div class="info">
+               <div class="hexagon">
                   <img src="images/rocket.png" alt="picture of speed meter">
-                </div>
-                  <h2>Went to school for Computer Science and Web Development</h2>
-                  <p>Javascript, Python, PHP, MySQL, HTML, CSS, Web Design, C Programming, Command Line</p>
-                </div>
-
-
-                <div class="info">
-                  <div class="hexagon">
-                    <img src="images/bulb.png" alt="picture of speed meter">
-                  </div>
-                    <h2>Learned my first programming language C#</h2>
-                    <p>2012</p>
-                  </div>
-
+               </div>
+               <h2>Went to school for Computer Science and Web Development</h2>
+               <p>Javascript, Python, PHP, MySQL, HTML, CSS, Web Design, C Programming, Command Line</p>
+            </div>
+            <div class="info">
+               <div class="hexagon">
+                  <img src="images/bulb.png" alt="picture of speed meter">
+               </div>
+               <h2>Learned my first programming language C#</h2>
+               <p>2012</p>
+            </div>
+         </div>
       </div>
-
-    </div>
-
-    <div class="contact">
-      <h1>CONTACT</h1>
-      <div class="contact-underline"></div>
-      <input class="input-name" type="text" placeholder="Name" maxlength="20">
-      <input class="input-email" type="email" placeholder="Email" maxlength="30">
-      <textarea class="textarea-message" placeholder="Your Message" cols="30" rows="7"></textarea>
-    </div>
-
-    <div class="footer">
-      <div></div>
-
-      <div class="social-media" onclick="linkedIn()"><img src="images/Linkedin Logo.png" alt="Picture of Linkedin Logo"></div>
-      <div class="copyright">GARRETT HALE ©2022</div>
-    </div>
-
-
-    <script src="index.js"></script>
-  </body>
+      <div class="contact">
+         <h1 id="contacts">CONTACT</h1>
+         <div class="contact-underline"></div>
+         <form action="https://formsubmit.co/Garrett.hale@yahoo.com" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="You got a new email from your portfolio website!">
+            <input type="hidden" name="_next" value="https://garrett-hale.github.io/Developer-Portfolio/thankyou.html">
+            <input class="input-name name" name="name" type="text" placeholder="Name" maxlength="20" required>
+            <input class="input-email email" name="email" type="email" placeholder="Email" maxlength="30" required>
+            <textarea class="textarea-message message" name="message" placeholder="Your Message" cols="30" rows="7" required></textarea>
+            <button type="submit" class="button">Send &#8594;</button>
+         </form>
+      </div>
+      <div class="footer">
+         <div></div>
+         <div class="social-media" onclick="websiteLink(`https://www.linkedin.com/in/garrett-hale-73a0a384/`)"><img src="images/Linkedin Logo.png" alt="Picture of Linkedin Logo"></div>
+         <div class="social-media social-media-git-icon" onclick="websiteLink(`https://github.com/Garrett-hale`)"><img src="images/Github Logo.png" alt="Picture of Github Logo"></div>
+         <div class="copyright">GARRETT HALE ©2022</div>
+      </div>
+      <script src="index.js"></script>
+   </body>
 </html>
