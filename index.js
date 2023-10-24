@@ -33,33 +33,3 @@ function mouseNav(trueOrFalse) {
 function mouseDropDown(trueOrFalse) {
   mouseOverDropDown = trueOrFalse;
 }
-
-//Calculator app
-
-function calculatorButtonPress() {
-  console.log("Calculator Button Pressed!");
-}
-
-function createElementAndAppend(elementTag, elementText, parentId) {
-  // Create element
-  const element = document.createElement(elementTag);
-  //Change text of element
-  element.innerHTML = "<p>" + elementText + "</p>";
-  //Add Attribute
-  addAttributeToElement(element, "class", "button-calculator");
-  addAttributeToElement(element, "onclick", "test()");
-  // Append to parent
-  document.getElementById(parentId).appendChild(element);
-}
-
-function addAttributeToElement(elementTarget, attributeName, attributeValue) {
-  // Create a class attribute
-  const att = document.createAttribute(attributeName);
-
-  // Set the value of the class attribute
-  att.value = attributeValue;
-
-  // Add the class attribute
-  const element = elementTarget;
-  element.setAttributeNode(att);
-}

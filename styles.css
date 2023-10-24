@@ -48,7 +48,7 @@ html {
 }
 
 #calculator {
-  margin-top: 300px
+  margin-top: 100px
 }
 
 .button-calculator {
@@ -88,6 +88,11 @@ html {
   color: white;
 }
 
+#calculator-value {
+  margin-top: 200px;
+  font-size: 50px;
+  color: white;
+}
 
 #nav-bar {
   background: gray;
