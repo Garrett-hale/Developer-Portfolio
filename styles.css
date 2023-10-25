@@ -59,6 +59,22 @@ html {
   width: 75px;
   height: 75px;
   line-height: 10px;
+  user-select: none; /* supported by Chrome and Opera */
+ -webkit-user-select: none; /* Safari */
+ -khtml-user-select: none; /* Konqueror HTML */
+ -moz-user-select: none; /* Firefox */
+ -ms-user-select: none; /* Internet Explorer/Edge */
+ transition-duration: 0.4s;
+}
+
+.button-calculator:hover {
+  transition-duration: 0.4s;
+  background-color: lightgrey;
+}
+
+.button-calculator:active {
+  transition-duration: 0.1s;
+  background-color: white;
 }
 
 .button-calculator p {
