@@ -7,25 +7,25 @@ var total = 0;
 //Calculator app
 
 function calculatorAdd(num1, num2) {
-  var num3 = num1 + num2;
+  var num3 = Number(num1) + Number(num2);
   console.log(num3);
   return num3;
 }
 
 function calculatorSubtract(num1, num2) {
-  var num3 = num1 - num2;
+  var num3 = Number(num1) - Number(num2);
   console.log(num3);
   return num3;
 }
 
 function calculatorMultiply(num1, num2) {
-  var num3 = num1 * num2;
+  var num3 = Number(num1) * Number(num2);
   console.log(num3);
   return num3;
 }
 
 function calculatorDivide(num1, num2) {
-  var num3 = num1 / num2;
+  var num3 = Number(num1) / Number(num2);
   console.log(num3);
   return num3;
 }
@@ -35,34 +35,70 @@ function calculatorNumberPress(elementText) {
 
   if (operator == "") {
     if (elementText != "+" && elementText != "-" && elementText != "/" && elementText != "*") {
-      num1 = num1 + elementText;
-      console.log(num1);
+
+        num1 = num1 + elementText;
+
+      //console.log(num1);
       //document.getElementById("calculator-value").innerHTML = num1;
     }
   } else {
     if (elementText != "+" && elementText != "-" && elementText != "/" && elementText != "*") {
+
       num2 = num2 + elementText;
-      console.log(num2);
+
+      if (num1 == "" || num1 == 0) {
+        num1 = 0;
+      }
+      //console.log(num2);
     //  document.getElementById("calculator-value").innerHTML = num2;
     }
   }
+
   document.getElementById("calculator-value").innerHTML = num1 + " " + operator + " " + num2;
 }
 
 function calculatorOperator(elementText) {
-  console.log("This has been Pressed!");
-  console.log(elementText);
+  //console.log("This has been Pressed!");
+  //console.log(elementText);
   if (elementText == "+") {
     operator = "+";
-  } else if (elementText == "Subtract") {
+  } else if (elementText == "-") {
     operator = "-";
-  } else if (elementText == "Divide") {
+  } else if (elementText == "/") {
     operator = "/";
-  } else if (elementText == "Multiply") {
+  } else if (elementText == "x") {
    operator = "x";
   }
-  console.log(operator + " has been Pressed!");
+  //console.log(operator + " has been Pressed!");
   document.getElementById("calculator-value").innerHTML = num1 + " " + operator + " " + num2;
+}
+
+function calculatorEquals(elementText) {
+  if (document.getElementById("calculator-value").innerHTML !== "0") {
+    if (operator == "+") {
+      total = calculatorAdd(num1, num2);
+    } else if (operator == "-") {
+      total = calculatorSubtract(num1, num2);
+    } else if (operator == "x") {
+      total = calculatorMultiply(num1, num2);
+    } else if (operator == "/") {
+      total = calculatorDivide(num1, num2);
+    }
+    console.log(total);
+    document.getElementById("calculator-value").innerHTML = num1 + " " + operator + " " + num2 + " " + "=" + " " + total;
+    num1 = total.toString();
+    num2 = "";
+    operator = "";
+    total = 0;
+  }
+}
+
+function calculatorClear(elementText) {
+  num1 = "";
+  num2 = "";
+  operator = "";
+  total = 0;
+  document.getElementById("calculator-value").innerHTML = 0;
 }
 
 function createElementAndAppend(elementTag, elementText, parentId) {
@@ -79,6 +115,10 @@ function createElementAndAppend(elementTag, elementText, parentId) {
     addAttributeToElement(element, "onclick", `calculatorNumberPress(${elementText})`);
   } else if (elementText === "+" || elementText === "-" || elementText === "/" || elementText === "x") {
     addAttributeToElement(element, "onclick", `calculatorOperator('${elementText}')`);
+  } else if (elementText === "=") {
+    addAttributeToElement(element, "onclick", `calculatorEquals('${elementText}')`);
+  } else if (elementText === "Clear") {
+    addAttributeToElement(element, "onclick", `calculatorClear('${elementText}')`);
   }
 
   // if (elementText == "Add") {
