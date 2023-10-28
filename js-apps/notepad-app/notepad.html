@@ -6,11 +6,26 @@
       <link rel="stylesheet" href="../../styles.css">
    </head>
    <body>
-      <div id="header">
-         <h1 class="h1-app">Notepad App</h1>
-         <h1 class="h12">Made in Javascript</h1>
+      <div id="header-notepad">
+        <h1 class="h1-app">Notepad App</h1>
+        <h1 class="h12">Made in Javascript</h1>
+        <br>
+        <h1 class="h12">This page uses JS cookies, refresh the page to see your notes saved.</h1>
 
+        <div id="notepad">
+          <textarea id="textarea-notepad" class="message" name="message" placeholder="Your notepad message" cols="50" rows="7" maxlength="200" required></textarea>
+          <button type="submit" class="button" onclick="createNote()">Submit &#8594;</button>
+        </div>
 
+        <br>
+
+        <div id="notes">
+
+        </div>
+
+        <script type="text/javascript">
+          //createNotes();
+        </script>
 
       </div>
 
