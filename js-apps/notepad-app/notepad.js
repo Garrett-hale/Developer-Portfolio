@@ -53,7 +53,7 @@ function createNote() {
 }
 
 function loadNotes() {
-  console.log(cookieToObject().Note);
+  //console.log(cookieToObject().Note);
 
   //notesArray.push(cookieToObject().Note);
   //for (var i = 0; i < array.length; i++) {
@@ -70,8 +70,6 @@ function loadNotes() {
 //     //array[i]
 //   }
 // }
-
-//createCookie("Test", "Input here", "expires=Thu, 01 Jan 2025 00:00:00 UTC");
 
 //console.log(document.cookie);
 
