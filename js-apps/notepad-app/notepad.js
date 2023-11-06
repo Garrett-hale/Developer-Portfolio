@@ -55,12 +55,14 @@ function createNote() {
 }
 
 function loadNotes() {
-  //console.log(cookieToObject().Note);
 
-  //notesArray.push(cookieToObject().Note);
-  //for (var i = 0; i < array.length; i++) {
-    //createElementAndAppend("div", );
-  //}
+  var cookieObject = cookieToObject();
+
+  console.log(cookieObject);
+
+  for (var i = 0; i < notesArray.length; i++) {
+    createElementAndAppend("div", cookieObject.Note[i], "notes");
+  }
 
   if (notesArray.length >= 9) {
     document.getElementById("header-notepad").style.height = "inherit";
