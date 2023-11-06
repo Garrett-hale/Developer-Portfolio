@@ -62,6 +62,10 @@ function loadNotes() {
 
   console.log(cookieObject);
 
+  cookieObject.map(item => {
+    createElementAndAppend("div", item, "notes");
+  });
+
   //var objectLength = Object.entries(cookieObject).length;
   //console.log(objectLength);
 
