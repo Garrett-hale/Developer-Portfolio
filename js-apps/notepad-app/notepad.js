@@ -54,6 +54,10 @@ function createNote() {
   }
 }
 
+function version() {
+  console.log("Version 1");
+}
+
 function loadNotes() {
 
   var cookieObject = cookieToObject();
