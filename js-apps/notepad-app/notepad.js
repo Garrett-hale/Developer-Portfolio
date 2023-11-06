@@ -45,7 +45,9 @@ function createNote() {
 
   notesArray.push(notepadValue);
 
-  createCookie("Note", notepadValue, "expires=Thu, 01 Jan 2025 00:00:00 UTC");
+  var arrayCount = notesArray.length;
+
+  createCookie("Note[" + `'${arrayCount}'` + "]", notepadValue, "expires=Thu, 01 Jan 2025 00:00:00 UTC");
 
   if (notesArray.length >= 9) {
     document.getElementById("header-notepad").style.height = "inherit";
