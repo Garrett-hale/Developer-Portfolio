@@ -60,7 +60,10 @@ function loadNotes() {
 
   console.log(cookieObject);
 
-  for (var i = 0; i < notesArray.length; i++) {
+  var objectLength = Object.entries(cookieObject).length;
+  console.log(objectLength);
+
+  for (var i = 0; i < objectLength.length; i++) {
     createElementAndAppend("div", cookieObject.Note[i], "notes");
   }
 
