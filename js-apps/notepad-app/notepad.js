@@ -1,10 +1,8 @@
 var notesArray = [];
 
 function cookieToObject() {
-  var cookieObject = document.cookie
-  .split(';')
-  .map(cookie => cookie.split('='))
-  .reduce((accumulator, [key, value]) => ({ ...accumulator, [key.trim()]: decodeURIComponent(value) }), {});
+  var cookieObject = document.cookie.split(';').map(cookie => cookie.split('=')).reduce((accumulator, [key, value]) => ({ ...accumulator, [key.trim()]: decodeURIComponent(value) }), {});
+  return cookieObject
 }
 
 function createCookie(cname, cvalue, expires) {
