@@ -64,12 +64,12 @@ function loadNotes() {
 
   console.log(cookieObject);
 
-  var objectLength = Object.entries(cookieObject).length;
-  console.log(objectLength);
+  //var objectLength = Object.entries(cookieObject).length;
+  //console.log(objectLength);
 
-  for (var i = 0; i < objectLength.length; i++) {
-    createElementAndAppend("div", cookieObject.Note[i], "notes");
-  }
+  //for (var i = 0; i < objectLength.length; i++) {
+  //  createElementAndAppend("div", cookieObject.Note[i], "notes");
+  //}
 
   if (notesArray.length >= 9) {
     document.getElementById("header-notepad").style.height = "inherit";
