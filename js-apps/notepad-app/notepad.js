@@ -53,7 +53,7 @@ function createNote() {
 }
 
 function version() {
-  console.log("Version 9");
+  console.log("Version 10");
 }
 
 function loadNotes() {
