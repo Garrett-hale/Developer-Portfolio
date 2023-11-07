@@ -53,7 +53,7 @@ function createNote() {
 }
 
 function version() {
-  console.log("Version 5");
+  console.log("Version 6");
 }
 
 function loadNotes() {
@@ -62,12 +62,15 @@ function loadNotes() {
 
   console.log(cookieObject);
 
-  for (var key in cookieObject) {
-    createElementAndAppend("div", key, "notes");
+  var objectLength = Object.entries(cookieObject).length;
+  console.log(objectLength);
+
+  if (objectLength > 0) {
+    for (var key in cookieObject) {
+      createElementAndAppend("div", key, "notes");
+    }
   }
 
-  //var objectLength = Object.entries(cookieObject).length;
-  //console.log(objectLength);
 
   //for (var i = 0; i < objectLength.length; i++) {
   //  createElementAndAppend("div", cookieObject.Note[i], "notes");
