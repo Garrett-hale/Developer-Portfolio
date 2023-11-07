@@ -65,7 +65,7 @@ function loadNotes() {
   //var objectLength = Object.entries(cookieObject).length;
   //console.log(objectLength);
 
-  if (cookieObject != "undefined") {
+  if (cookieObject != "") {
     for (var key in cookieObject) {
       createElementAndAppend("div", key, "notes");
     }
