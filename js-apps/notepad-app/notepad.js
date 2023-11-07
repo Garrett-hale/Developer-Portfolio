@@ -53,7 +53,7 @@ function createNote() {
 }
 
 function version() {
-  console.log("Version 6");
+  console.log("Version 7");
 }
 
 function loadNotes() {
@@ -62,10 +62,10 @@ function loadNotes() {
 
   console.log(cookieObject);
 
-  var objectLength = Object.entries(cookieObject).length;
-  console.log(objectLength);
+  //var objectLength = Object.entries(cookieObject).length;
+  //console.log(objectLength);
 
-  if (objectLength > 0) {
+  if (cookieObject != "undefined") {
     for (var key in cookieObject) {
       createElementAndAppend("div", key, "notes");
     }
