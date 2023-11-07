@@ -67,7 +67,7 @@ function loadNotes() {
 
   if (cookieObject !== '') {
     for (var key in cookieObject) {
-      createElementAndAppend("div", key, "notes");
+      createElementAndAppend("div", cookieObject.key, "notes");
     }
   }
 
