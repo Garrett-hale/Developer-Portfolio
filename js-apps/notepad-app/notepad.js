@@ -50,6 +50,11 @@ function createNote() {
   if (notesArray.length >= 9) {
     document.getElementById("header-notepad").style.height = "inherit";
   }
+  if (window.innerWidth <= 900 && notesArray.length >= 2) {
+    document.getElementById("header-notepad").style.height = "inherit";
+    console.log("TEST 1");
+  }
+  console.log(window.innerWidth);
 }
 
 function version() {
@@ -81,6 +86,12 @@ function loadNotes() {
   if (notesArray.length >= 9) {
     document.getElementById("header-notepad").style.height = "inherit";
   }
+
+  if (window.innerWidth <= 900 && notesArray.length >= 2) {
+    document.getElementById("header-notepad").style.height = "inherit";
+    console.log("TEST 2");
+  }
+
 }
 
 // function countNotes() {
