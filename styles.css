@@ -25,7 +25,7 @@ html {
   padding-top: 1px;
   background-image: linear-gradient(to bottom, var(--primary), var(--secondary));
   text-align: center;
-  /*white-space: nowrap;*/
+  /*white-space: nowrap;*//**/
   font-size: 25px;
 }
 
