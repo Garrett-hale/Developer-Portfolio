@@ -3,8 +3,8 @@
   --secondary: #1e6ae1;
   --font-one-size: 25px;
   --font-two-size: 15px;
-  --font-one: arial;
-  --font-two: sans-serif,
+  --font-one: "Source Sans Pro", "Arial", sans-serif;;
+  --font-two: "Lucida Console", "Courier New", monospace;
 }
 
  * {
@@ -115,6 +115,12 @@ html {
   color: white;
 }
 
+.center {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+
 #calculator-value {
   margin-top: 200px;
   font-size: 50px;
@@ -185,17 +191,18 @@ html {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 150px;
+  margin-top: 100px;
+  margin-bottom: -100px;
 }
 
 .info {
   width: 45%;
-  margin-top: 200px;
-  position: relative;
+  margin-top: 300px;
+  /*position: inherit;*/
 }
 
 .info:nth-child(1) {
-  margin-bottom: 70px;
+  margin-bottom: 50px;
 }
 
 .info p {
@@ -205,8 +212,9 @@ html {
 
 .info h2 {
   text-align: center;
-  font-size: 18px;
-  margin-top: -150px;
+  font-size: 20px;
+  margin-top: -200px;
+  
 }
 
 .hexagon {
@@ -309,23 +317,27 @@ html {
 }
 
 .skill-javascript {
-  width: 80%;
+  width: 100%;
 }
 
 .skill-react {
-  width: 50%;
+  width: 100%;
 }
 
 .skill-git {
-  width: 80%;
+  width: 100%;
+}
+
+.skill-sass {
+  width: 100%;
 }
 
 .skill-css {
-  width: 80%;
+  width: 100%;
 }
 
 .skill-html {
-  width: 90%;
+  width: 100%;
 }
 
 .contact {
@@ -427,26 +439,23 @@ html {
   border-radius: 10px;
 }
 
-//input::-webkit-input-placeholder {
-  //  font-size: 18px;
-//}
-
 .footer {
   background-color: #1b242f;
   height: 230px;
   width: 100%;
   padding-top: 1px;
+  text-align: center;
 }
 
 .social-media {
-  /*width: 60px;*/
   width: 60px;
   background-color: gray;
   height: 60px;
-  /*margin: auto;*/
   margin-top: 25px;
   transition-duration: 0.4s;
   display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .social-media img {
@@ -477,6 +486,7 @@ html {
 
 h1 #email-sent {
   margin: auto;
+  margin-top: 500px;
 }
 
 #email-sent {
