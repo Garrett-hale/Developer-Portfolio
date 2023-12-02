@@ -472,7 +472,7 @@ html {
 .social-media:hover {
   background-color: var(--secondary);
 }
-/**//**//**//**/
+/**//**//**//**//**/
 .social-media:onclick {
   background-color: gray;
 }
